@@ -44,7 +44,7 @@ The project uses:
 ## Installation
 
 1. Clone the repository:
-```bash
+
 git clone https://github.com/saisreereddy19/RAG_agent.git
 cd RAG_agent
 
@@ -58,5 +58,17 @@ pip install -r requirements.txt
 
 4.Add your Google Gemini API key to a .env file:
 GOOGLE_API_KEY=your_api_key_here
+---
 
+## Enhancements & Improvements
 
+Plan Node Enhancement
+Short casual messages are handled without querying the database.
+Queries are classified as RAG-required or direct-response.
+Answer Generation Improvements
+Uses Gemini 2.0 Flash model with max output tokens set.
+Produces detailed, context-aware answers.
+Tracks each stage of the agent pipeline.
+Can be extended with LangSmith/TruLens for advanced evaluation.
+Checks relevance automatically by comparing keywords in query and answer.
+Can be enhanced using a second LLM or BLEU/ROUGE/BERTScore metrics.
